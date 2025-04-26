@@ -4,8 +4,8 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { type Container, type ISourceOptions } from "@tsparticles/engine";
-import { loadAll } from "@tsparticles/all";
-import particleConfig from "./particlesjs-config.json";
+import { loadAll } from "@tsparticles/all";;
+import TsParticlesConfig from "./TsParticlesConfig";
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
@@ -27,7 +27,7 @@ export default function ParticlesBackground() {
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
-        options={particleConfig as ISourceOptions}
+        options={TsParticlesConfig}
         className="absolute inset-0 -z-10"
       />
     )
