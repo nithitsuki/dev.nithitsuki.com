@@ -1,35 +1,23 @@
-// components/ParticlesBackground.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { type Container} from "@tsparticles/engine";
-import { loadAll } from "@tsparticles/all";;
+import { loadSlim } from "@tsparticles/slim";
+import type { Engine } from "@tsparticles/engine";
 import TsParticlesConfig from "./TsParticlesConfig";
 
 export default function ParticlesBackground() {
-  const [init, setInit] = useState(false);
-
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadAll(engine);
-    }).then(() => {
-      setInit(true);
+    initParticlesEngine(async (engine: Engine) => {
+      await loadSlim(engine);
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
   return (
-    init && (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={TsParticlesConfig}
-        className="absolute inset-0 -z-10"
-      />
-    )
+    <Particles
+      id="tsparticles"
+      options={TsParticlesConfig}
+      className="absolute inset-0 -z-10"
+    />
   );
 }
