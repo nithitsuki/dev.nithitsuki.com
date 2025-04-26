@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "postexport": "echo 'dev.nithitsuki.com' > out/CNAME",
+    "deploy": "pnpm run build && pnpm run export && echo 'dev.nithitsuki.com' > out/CNAME && gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {

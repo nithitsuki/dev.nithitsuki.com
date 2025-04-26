@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { type Container, type ISourceOptions } from "@tsparticles/engine";
+import { type Container} from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";;
 import TsParticlesConfig from "./TsParticlesConfig";
 
