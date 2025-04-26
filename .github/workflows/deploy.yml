@@ -58,6 +58,10 @@ jobs:
         with:
           node-version: "20"
           cache: pnpm
+    
+      # Install pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       # Setup Pages
       - name: Setup Pages
