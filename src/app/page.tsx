@@ -9,7 +9,7 @@ import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css'; // Import Typist CSS
 
 export default function Home() {  
-  const words = [ "Software Engineer","Full Stack Developer"];
+  const words = [ " Software Engineer"," Full Stack Developer"];
     const [typingDone, setTypingDone] = useState(false);
     const [magicText, setMagicText] = useState(<></>);
     
@@ -93,12 +93,13 @@ export default function Home() {
                   <span>akes</span>
                   <Typist.Backspace count={8} delay={700} />
                   <span>Next.js</span>
+                  <Typist.Delay ms={900} />
                 </Typist>
               ) : (
                 <div className="text-gray-200">
                   <span>Sophomore CS Student </span>
                   <span> |</span>
-                  <FlipWords words={words} className="text-white"/>
+                  <FlipWords words={words} className="text-white" duration={6000} />
                   <span>| Made with Next.js</span>
                 </div>
               )}
