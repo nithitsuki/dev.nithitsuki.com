@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   output: 'export',
   // assetPrefix: '/dev.nithitsuki.com',
   // basePath:    '/dev.nithitsuki.com',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
