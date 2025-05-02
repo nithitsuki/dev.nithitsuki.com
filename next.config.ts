@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  assetPrefix: '/dev.nithitsuki.com', // <-- important for GitHub Pages
-  basePath:    '/dev.nithitsuki.com',    // <-- important for GitHub Pages
+  // assetPrefix: '/dev.nithitsuki.com',
+  // basePath:    '/dev.nithitsuki.com',
 };
 
 export default nextConfig;

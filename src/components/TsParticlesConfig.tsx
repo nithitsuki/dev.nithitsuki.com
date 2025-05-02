@@ -7,6 +7,7 @@ const TsParticlesConfig: ISourceOptions = {
   background: {
     color: {
       value: "#000000"
+      // value: "#000000"
     },
   },
   fullScreen: {
