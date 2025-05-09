@@ -14,7 +14,7 @@ import TypistThingy from "@/components/main-page/TypistThingy";
 
 export default function Home() {
   // ===== CONFIGURATION AND STATE =====
-  const devMode = true; // Changed from let to const for better practice
+  const devMode = false; // Changed from let to const for better practice
   
   // Animation duration variables
   const containerAnimDuration = devMode ? 0 : 2;
